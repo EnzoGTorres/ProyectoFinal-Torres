@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script defer src="js/dom.js"></script>
+    <script src="js/variables.js"></script>
+    <script defer src="js/main.js"></script>
+    <title>Simulacion Lending</title>
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <div class="title">
+                <h1 id="titulo">Simulador de Prestamo através de Lending</h1>
+            </div>    
+            <div class="subtitle">
+                <h2 id="subtitulo"> Simulamos tu lending con respaldo en monedas extranjeras</h2>
+            </div>    
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="moneda">
+            <h1>Te damos la opcion de entregar dolares</h1>
+            <p>Entregando dolares tendras la opcion de tomar un prestamos por el 85% del valor en pesos argentinos y al
+                pagar la ultima cuota te devolvemos el mismo monto más intereses</p>
+        </div>
+        <div class="moneda">
+            <h1>La otra opcion es entregar euros</h1>
+            <p>Entregando euros tendrás la posibilidad de tomar prestamos por el 88% del valor en pesos argentinos,
+                recuperando el monto mas los intereses generados</p>
+        </div>
+    </div>
+
+
+
+    <div class="form">
+        <h1>Datos de Prestamo</h1>
+        <input type="text" id="inputMoneda" placeholder="ingresa la moneda en garantía">
+        <input type="number" id="inputPrestamo" placeholder="ingresa el monto a depositar en moneda extranjera">
+        <input type="number" id="inputPesos" placeholder="ingresa prestamo a pedir">
+        <input type="number" id="inputCuotas" placeholder="ingresa cantidad de cuotas">
+        <button id="btn">Consultar</button>
+    </div>
+
+    <div class="table">
+
+    </div>
+
+</body>
+
+
+</html>
