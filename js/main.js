@@ -1,6 +1,16 @@
 
 const eligeMoneda = "Ingresa la moneda de garantía \n" + "dolar \n" + "euro"
 
+fetch(URL)
+    .then(response => response.json())
+    .then(data => {
+        valorDolar = data.blue.value_sell;
+        valorEuro = data.blue_euro.value_sell;
+    })
+    .catch(error => {
+        document.querySelector('#mensajeError').classList.remove('hidden');
+    });
+
 
 class Prestamo {
     constructor(codigo, moneda, monto, prestamo, cuotaPrestamo, prestamoMasInteres) {
@@ -21,7 +31,7 @@ botonConsultar.addEventListener("click", ()=> {
 function elegirMoneda() {
     moneda = (inputMoneda.value).toLowerCase();
     if (moneda!== "dolar"  && moneda !== "euro") {
-        alert("debes elegir una moneda de respaldo valida.")
+        document.querySelector('#mensajeError2').classList.remove('hidden');
 
     } else if (moneda === "dolar") {
         interes = 0.85
@@ -43,7 +53,7 @@ function calculoPrestamo() {
     prestamo = inputPesos.value;
     cuotas = inputCuotas.value;
     if (prestamo >= monto * cotizacion * interes) {
-        alert(" No puedes pedir este monto en relacion a esa garantia.");
+        document.querySelector('#mensajeError3').classList.remove('hidden');
     } else {
         codigo = Math.floor(Math.random() * 100) + 1;
         cuotaPrestamo = (((prestamo * (1 + parseFloat(interes / 12))) / cuotas));

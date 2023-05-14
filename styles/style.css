@@ -25,6 +25,26 @@
     
 }
 
+.card {
+    background: #FAE6E6;
+    padding: .5em 1em 2em 2em;
+    margin: 0 0 0 0;
+    box-shadow: inset 6px 0 #CC0000;
+}
+.card.hidden {
+    display: none;
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-left: 3em;
+    
+}
+.red-text {
+    color: #f44336;
+}
+
 .title h1{
 color:blue;
 }
